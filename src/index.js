@@ -1,5 +1,6 @@
 import './reset.css'
 import './style.css'
+// import html from "..";
 
 let prjContainer = document.querySelector('.project_container')
 let skillContainer = document.querySelector('.skills')
@@ -13,7 +14,7 @@ let navAbout = document.querySelector('.nav_about')
 
 let prjItems = [
 `<div class="project_item">
-    <img src="../src/ebp.png" alt="ecopark bicycle parking">
+    <img src="./img/ebp.png" alt="ecopark bicycle parking">
     <figcaption>Ecopark Bicycle Parking</figcaption>
     <div class="link_button">
         <div>
@@ -25,7 +26,7 @@ let prjItems = [
     </div>
 </div>`,
 `<div class="project_item">
-    <img src="../src/tnw.png" alt="tnw">
+    <img src="./img/tnw.png" alt="tnw">
     <figcaption>TNW Clone</figcaption>
     <div class="link_button">
         <div>
@@ -38,7 +39,7 @@ let prjItems = [
     </div>
 </div>`,
 `<div class="project_item">
-    <img src="../src/weatherapp.png" alt="weatherapp">
+    <img src="./img/weatherapp.png" alt="weatherapp">
     <figcaption>Weather App</figcaption>
     <div class="link_button">
         <div>
@@ -50,7 +51,7 @@ let prjItems = [
     </div>
 </div>`,
 `<div class="project_item" >
-    <img src="../src/calculator.png" alt="calculator">
+    <img src="./img/calculator.png" alt="calculator">
     <figcaption>Calculator</figcaption>
     <div class="link_button">
         <div>
@@ -62,7 +63,7 @@ let prjItems = [
     </div>
 </div>`,
 `<div class="project_item">
-    <img src="../src/library.png" alt="library">
+    <img src="./img/library.png" alt="library">
     <figcaption>Library</figcaption>
     <div class="link_button">
         <div>
@@ -74,7 +75,7 @@ let prjItems = [
     </div>
 </div>`,
 `<div class="project_item">
-    <img src="../src/rps.png" alt="rockpaperscissors">
+    <img src="./img/rps.png" alt="rockpaperscissors">
     <figcaption>Rock Paper Scissors</figcaption>
     <div class="link_button">
         <div>
@@ -86,7 +87,7 @@ let prjItems = [
     </div>
 </div>`,
 `<div class="project_item">
-    <img src="../src/etchaketch.png" alt="etchasketch">
+    <img src="./img/etchaketch.png" alt="etchasketch">
     <figcaption>Etch a Sketch</figcaption>
     <div class="link_button">
         <div>
