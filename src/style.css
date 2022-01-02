@@ -1,0 +1,332 @@
+body{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+}
+h1:before, h1:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid white;
+    margin: auto;
+}
+h1:before {
+margin-right: 10px
+}
+h1:after {
+margin-left: 10px
+}
+
+h2{
+    font-size: 35px;
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    margin: 0;
+    background-color: black;
+    height: 40px;
+    z-index: 5;
+}
+.navbar a{
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+    padding: 1.1vw 2vw;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 20vw;
+}
+.navbar a:hover, .navbar a.active{
+    /* text-decoration: underline; */
+    background-color: white;
+    color: black;
+}
+
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.about .about_content{
+    width: 40vw;
+    word-wrap: normal;
+    
+
+}
+.about_container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about_container img{
+    width: 30vw;
+    border-radius: 30px;
+}
+
+.skills{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.skills h1{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+}
+.skills h2{
+    margin-left: 100px;
+}
+.skills > div{
+    margin-top: 40px;
+}
+.skills > div > div{
+    margin-top: 20px;
+}
+.skill_language > .skill_container{
+    width: 60vw;
+}
+.skill_lib_frame > .skill_container{
+    width: 40vw;
+}
+.skill_other > .skill_container{
+    width: 70vw;
+}
+.skill_container{
+    display: flex;
+    flex-direction: row;
+    /* width: 90vw; */
+    justify-content: space-between;
+    margin-left: 3vw;
+    /* margin-right: 50px;
+    box-sizing: border-box; */
+    /* justify-content: flex-start; */
+}
+.skill_item{
+    /* margin-left: 8vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill_item img{
+    height: 4vw;
+}
+.skill_item figcaption{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.skill_item:hover figcaption{
+    opacity: 100;
+    visibility: visible;
+}
+
+
+.projects{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project_container{
+    margin-top: 30px;
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 0px;
+    position: relative;
+    /* width: 100vw; */
+}
+.project_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.project_item > *{
+    margin-top: 20px;
+}
+.project_item img{
+    height: 35vw;
+}
+.link_button{
+    display: flex;
+    flex-direction: row;
+
+}
+.link_button > div{
+    border: solid white ;
+    padding: 5px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    height: 35px;
+    z-index: 1;
+    background-color: black;
+}
+.link_button a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    width: fit-content;
+    z-index: 3;
+}
+.oval{
+    position: absolute;
+    border: solid 1px white;
+    width: 180px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.link_button:hover .oval{
+    animation-name: spin;
+    animation-duration: 3s;
+}
+@keyframes spin{
+    from {
+        position: absolute;
+        border: solid 1px white;
+        width: 180px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: black;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform: rotate(0);
+    }
+    to {
+        position: absolute;
+        border: solid 1px white;
+        width: 180px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: black;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform: rotate(360deg);
+    }
+}
+
+
+.right, .left{
+    /* transform: rotate(15deg); */
+    width: 25vw;
+    opacity: 0.3;
+    user-select: none;
+    transition: 0.3s;
+    transform: scale(0.8);
+}
+.left img{
+    width: 25vw;
+    object-fit: cover;
+}
+.right img{
+    width: 25vw;
+    object-fit: cover;
+}
+.left:hover, .right:hover{
+    opacity: 0.7;
+}
+
+.show{
+    z-index: 3;
+    position: relative;
+    width: 50vw;
+}
+
+.contact{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact h1{
+    margin-bottom: 50px;
+}
+.contact a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+   
+}
+.contact div{
+    margin-top: 20px;
+    border: solid white 1px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 25px;
+}
+.contact_item:hover a{
+    margin-left: 15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hide{
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s all ease;
+    margin-top: 80px;
+}
+.appear{
+    visibility: visible;
+    opacity: 100;
+    margin-top: 30px;
+}
+.hide_skills{
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s all ease;
+    transform: scale(0);
+}
+.appear_skills{
+    visibility: visible;
+    opacity: 100;
+    margin-left: 0px;
+    transform: scale(1);
+
+}
+
+footer{
+    margin-top: 150px;
+    position: relative;
+    width: fit-content;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 16px;
+    user-select: none;
+}
