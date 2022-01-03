@@ -161,6 +161,54 @@ h2{
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    
+}
+.project_item.popfromleft{
+    position: relative;
+    animation-name: popfromleft;
+    animation-duration: 0.7s;
+}
+.project_item.popfromright{
+    position: relative;
+    animation-name: popfromright;
+    animation-duration: 0.7s;
+}
+.project_item.movefromleft{
+    position: relative;
+    animation-name: movefromleft;
+    animation-duration: 1s;
+}
+.project_item.movefromright{
+    position: relative;
+    animation-name: movefromright;
+    animation-duration: 1s;
+}
+@keyframes popfromright {
+    0% {transform: scale(1); right: 0px;}
+    50% {transform: scale(1.1);
+    right: 7vw;}
+    100% {transform: scale(1);
+    right: 0px;}
+}
+@keyframes popfromleft {
+    0% {transform: scale(1); left: 0px;}
+    50% {transform: scale(1.1);
+    left: 7vw;}
+    100% {transform: scale(1);
+    left: 0px;}
+}
+@keyframes movefromright {
+    0% {right: 0px;}
+    50% {right: 5vw;}
+    100% {right: 0px;}
+}
+@keyframes movefromleft {
+    0% {left: 0px;}
+    50% {left: 5vw;}
+    100% {left: 0px;}
+}
+.project_item img{
+    border-radius: 10px;
 }
 .project_item > *{
     margin-top: 20px;
@@ -191,6 +239,9 @@ h2{
     color: white;
     width: fit-content;
     z-index: 3;
+}
+.link_button a:hover{
+    text-decoration: underline;
 }
 .oval{
     position: absolute;
@@ -254,8 +305,13 @@ h2{
     width: 25vw;
     object-fit: cover;
 }
-.left:hover, .right:hover{
+.left:hover{
     opacity: 0.7;
+    cursor: url('https://img.icons8.com/ios/48/000000/chevron-left.png'), default;
+}
+.right:hover{
+    opacity: 0.7;
+    cursor: url("https://img.icons8.com/ios/50/000000/chevron-right.png"), default;
 }
 
 .show{
@@ -280,15 +336,19 @@ h2{
     transition: 0.3s;
    
 }
-.contact div{
+.contact_item{
     margin-top: 20px;
     border: solid white 1px;
+    background-color: black;
     width: 200px;
     text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-left: 25px;
+}
+.contact_item a{
+    /* color: black; */
 }
 .contact_item:hover a{
     margin-left: 15px;

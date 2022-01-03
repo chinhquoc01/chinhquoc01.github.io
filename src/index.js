@@ -116,6 +116,14 @@ left.addEventListener('click', ()=>{
     show.innerHTML =  prjItems[mid]
     left.innerHTML = prjItems[l]
     right.innerHTML = prjItems[r]
+
+    show.firstChild.classList.add('popfromleft')
+    left.firstChild.classList.add('movefromleft')
+    right.firstChild.classList.add('movefromleft')
+    let temp = show.firstChild
+    setTimeout(()=>{
+        temp.classList.remove('popfromleft')
+    }, 1000)
 })
 right.addEventListener('click', ()=>{
     (l + 1 == prjItems.length) ? (l = 0) : l++
@@ -125,6 +133,15 @@ right.addEventListener('click', ()=>{
     show.innerHTML =  prjItems[mid]
     left.innerHTML = prjItems[l]
     right.innerHTML = prjItems[r]
+
+    show.firstChild.classList.add('popfromright')
+    left.firstChild.classList.add('movefromright')
+    right.firstChild.classList.add('movefromright')
+    let temp = show.firstChild
+
+    setTimeout(()=>{
+        temp.classList.remove('popfromright')
+    }, 1000)
 })
 
 // console.log(prjContainer.getBoundingClientRect().top);
