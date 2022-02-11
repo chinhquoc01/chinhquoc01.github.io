@@ -26,6 +26,19 @@ let prjItems = [
     </div>
 </div>`,
 `<div class="project_item">
+    <img src="./img/fakebook.png" alt="fakebook">
+    <figcaption>Fakebook</figcaption>
+    <div class="link_button">
+        <div>
+            <a href="https://your-fakebook.herokuapp.com" target="_blank">Live Project</a>
+            
+        </div>
+        <div>
+            <a href="https://github.com/chinhquoc01/Fakebook" target="_blank">Source Code</a>
+        </div>
+    </div>
+</div>`,
+`<div class="project_item">
     <img src="./img/tnw.png" alt="tnw">
     <figcaption>TNW Clone</figcaption>
     <div class="link_button">
