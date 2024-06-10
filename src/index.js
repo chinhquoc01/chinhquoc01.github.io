@@ -122,6 +122,14 @@ right.innerHTML = prjItems[r]
 
 
 left.addEventListener('click', ()=>{
+    if (gtag) {
+        gtag("event", "select_content", {
+          content_type: "slider",
+          content_id: "left"
+        });
+    } else {
+        console.log('no gtag')
+    }
     (l - 1 == -1) ? (l = prjItems.length-1) : l--
     (r - 1 == -1) ? (r = prjItems.length-1) : r--
     (mid - 1 == -1) ? (mid = prjItems.length-1) : mid-- 
@@ -139,6 +147,14 @@ left.addEventListener('click', ()=>{
     }, 1000)
 })
 right.addEventListener('click', ()=>{
+    if (gtag) {
+        gtag("event", "select_content", {
+          content_type: "slider",
+          content_id: "right"
+        });
+    } else {
+        console.log('no gtag')
+    }
     (l + 1 == prjItems.length) ? (l = 0) : l++
     (r + 1 == prjItems.length) ? (r = 0) : r++
     (mid + 1 == prjItems.length) ? (mid = 0) : mid++ 
