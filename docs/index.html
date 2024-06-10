@@ -159,5 +159,32 @@
     <br>
 
     <script src="./main.js"></script>
+    <script>
+        let left = document.querySelector('.left')
+        let right = document.querySelector('.left')
+        left.addEventListener('click', () => {
+            if (gtag) {
+                gtag("event", "select_content", {
+                content_type: "slider",
+                content_id: "left"
+                });
+                console.log('slider-left')
+            } else {
+                console.log('no gtag')
+            }
+        })
+        right.addEventListener('click', () => {
+            if (gtag) {
+                gtag("event", "select_content", {
+                content_type: "slider",
+                content_id: "right"
+                });
+                console.log('slider-right')
+            } else {
+                console.log('no gtag')
+            }
+        })
+
+    </script>
 </body>
 </html>
