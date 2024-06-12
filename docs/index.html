@@ -36,11 +36,11 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <nav class="navbar">
-        <a class="nav_home" href="#main">Home</a>
-        <a class="nav_about" href="#about">About</a>
-        <a class="nav_skills" href="#skills">Skills</a>
-        <a class="nav_projects" href="#projects">Projects</a>
-        <a class="nav_contact" href="#contact">Contact</a>
+        <a class="nav_home" href="#main" data-track-name="home">Home</a>
+        <a class="nav_about" href="#about" data-track-name="about">About</a>
+        <a class="nav_skills" href="#skills" data-track-name="skills">Skills</a>
+        <a class="nav_projects" href="#projects" data-track-name="projects">Projects</a>
+        <a class="nav_contact" href="#contact" data-track-name="contact">Contact</a>
 
     </nav>
     <div class="main" id="main">
@@ -49,15 +49,15 @@
         <div class="about">
             <h1>About me</h1>
             <div class="about_container">
-                <div class="about_content">Hi I'm Quoc! <br><br>I'm interested in technology and now I'm focused on web development!</div>
-                <img src="./img/hehi.jpg" alt="avatar" srcset="">
+                <div class="about_content" data-track-name="intro">Hi I'm Quoc! <br><br>I'm interested in technology and now I'm focused on web development!</div>
+                <img src="./img/hehi.jpg" alt="avatar" srcset="" data-track-name="avatar">
             </div>
         </div>
 
         <div id="skills" style="margin-bottom: 30px;"></div>
         <div class="skills hide_skills">
             <h1>Skills</h1>
-            <div class="skill_language">
+            <div class="skill_language" data-track-name="skill-language">
                 <h2>Language</h2>
                 <div class="skill_container">
                     <div class="skill_item">
@@ -84,7 +84,7 @@
 
                 </div>
             </div>
-            <div class="skill_lib_frame">
+            <div class="skill_lib_frame" data-track-name="skill-library">
                 <h2>Library & Framework</h2>
                 <div class="skill_container">
                     <div class="skill_item">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="skill_other">
+            <div class="skill_other" data-track-name="skill-other">
                 <h2>Miscellaneous</h2>
                 <div class="skill_container">
                     <div class="skill_item">
